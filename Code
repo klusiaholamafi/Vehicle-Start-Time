@@ -1,0 +1,7 @@
+task.spawn(function()
+	for i, v in next, getgc(true) do
+		if type(v) == "table" and rawget(v, "MaxSpeed") then
+			rawset(v, "StartTime", _G.Starttime)
+		end
+	end
+end)
